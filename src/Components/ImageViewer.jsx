@@ -7,7 +7,7 @@ import { Locationatom } from '../store/atoms/Locationatom';
 
 function ImageViewer() {
 const vidRef = useRef();
-const choosenLanguage = useRecoilValue(Locationatom);
+const choosenLocation = useRecoilValue(Locationatom);
 const [reached, setReached]=useState(false);
 
 useEffect(()=>{
@@ -39,7 +39,7 @@ function prevStep(){
 
         {/* <img src={image} alt="" className=' overflow-hidden rotate-90 '/>
          */}
-         <video ref={vidRef} src={`/src/assets/Directions/${choosenLanguage}.mp4`}   muted={true}></video>
+         <video ref={vidRef} src={`/src/assets/Directions/${choosenLocation}.mp4`}   muted={true}></video>
         </div>
 
 

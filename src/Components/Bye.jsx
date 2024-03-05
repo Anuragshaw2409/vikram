@@ -3,8 +3,18 @@ import vikram from '../assets/image-vikram.png'
 import { useNavigate } from 'react-router-dom'
 import {choosenLanguage} from '../store/atoms/Language'
 import { useRecoilValue } from 'recoil';
+import ByeHindi from "../assets/audio/ThankYouHindi.mp3"
+import ByeEnglish from "../assets/audio/ThankYouEnglish.m4a"
 
 function Bye() {
+  let audioComponent=null;
+  const language = useRecoilValue(choosenLanguage);
+  if(language =='En'){
+      audioComponent = <audio src={ByeEnglish} autoPlay/>
+  }
+  else
+  audioComponent =<audio src={ByeHindi} autoPlay/>
+
     const navigate = useNavigate();
     const lang = useRecoilValue(choosenLanguage);
     let byeText = ["Thank you for visiting us","Have a nice day"];

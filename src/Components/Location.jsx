@@ -6,15 +6,25 @@ import { Locationatom } from '../store/atoms/Locationatom';
 import LocationButton from './LocationButton';
 import { useNavigate } from 'react-router-dom';
 import annyang from 'annyang';
+import LocationHindi from "../assets/audio/AskLocationHindi.mp3"
+import LocationEnglish from "../assets/audio/AskLocationEnglish.m4a"
 
 
 
 function Location() {
+    let audioComponent =null;
+
     const setLocation = useSetRecoilState(Locationatom);
 
     const navigate = useNavigate();
     let keys = 0;
     const language = useRecoilValue(choosenLanguage);
+    if(language =='En'){
+        audioComponent = <audio src={LocationEnglish} autoPlay/>
+    }
+    else
+    audioComponent =<audio src={LocationHindi} autoPlay/>
+
     console.log(language);
     let buttonText;
     let locations;
@@ -60,7 +70,7 @@ function Location() {
 
     return (
         <>
-            <audio src={language == 'Hindi' ? "/src/assets/audio/AskLocationHindi.mp3" : "/src/assets/audio/AskLocationEnglish.m4a"} autoPlay ></audio>
+            {audioComponent}
             <div className="locationContainer flex flex-row absolute right-[4%] flex-wrap  w-[60%] top-[7%]">
 
                 {locations.map((location, index) => <LocationButton location={location} indexes={index} key={++keys} />)}
