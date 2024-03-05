@@ -31,7 +31,7 @@ function Bye() {
     },[]);
   return (
     <>
-    <audio src={lang=='En'?"/src/assets/audio/ThankYouEnglish.m4a":"/src/assets/audio/ThankYouHindi.mp3"} autoPlay ></audio>
+    {audioComponent}
       <div className='bg-gray-200 bg-opacity-60 h-auto w-auto absolute  flex-col justify-center text-center top-1/4 p-4 rounded-2xl right-[5%]'>
         <h1 className='p-1 bg-gradient-to-t from-purple-800 to-custom-blue text-transparent text-4xl font-bold bg-clip-text  '>{byeText[0]}</h1>
         <br />

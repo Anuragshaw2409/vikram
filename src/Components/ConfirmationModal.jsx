@@ -2,10 +2,19 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import {choosenLanguage} from '../store/atoms/Language'
 import { useRecoilValue } from 'recoil';
+import ConfirmHindi from "../assets/audio/confirmHindi.mp3"
+import ConfirmEnglish from "../assets/audio/confirmEnglish.m4a"
 
 
 function ConfirmationModal({setReached}) {
     const lang = useRecoilValue(choosenLanguage);
+    let audioComponent=null;
+  const language = useRecoilValue(choosenLanguage);
+  if(language =='En'){
+      audioComponent = <audio src={ConfirmEnglish} autoPlay/>
+  }
+  else
+  audioComponent =<audio src={ConfirmHindi} autoPlay/>
     let question;
     let buttonText;
     if(lang=='Hindi'){
@@ -22,7 +31,7 @@ function ConfirmationModal({setReached}) {
 
     return (
         <>
-        <audio src={lang=='En'?"/src/assets/audio/confirmEnglish.m4a":"/src/assets/audio/confirmHindi.mp3" }autoPlay ></audio>
+       {audioComponent}
             <div className="continerFull w-screen h-screen bg-slate-500 bg-opacity-50 absolute top-0 left-0 z-10">
 
                 <div className="modalBox w-[40%] h-[40%] bg-white rounded-lg absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-col justify-center items-center">
