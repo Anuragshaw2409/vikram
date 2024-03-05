@@ -60,9 +60,9 @@ function LangPage() {
           console.log("Started");
           
           return ()=>{
-            annyang.pause();
             annyang.removeCommands();
-            console.log("Paused Moving to next page");
+            annyang.abort();
+            // console.log("Paused Moving to next page");
           }
         }
         
