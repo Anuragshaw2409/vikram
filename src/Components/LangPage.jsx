@@ -10,7 +10,7 @@ import annyang from 'annyang';
 
 
 function LangPage() {
-    const [spoken, setSpoken]=useState(0);
+    
     const navigate = useNavigate();
 
   
@@ -57,7 +57,6 @@ function LangPage() {
           };
           
           annyang.addCommands(commands);
-          annyang.start({autoRestart: true, continuous: false});
           console.log("Started");
           
           return ()=>{
@@ -67,14 +66,15 @@ function LangPage() {
           }
         }
         
-}, [spoken]);
+}, []);
 
 
 
 
     return (
         <>
-            <audio src={ChooseLang} autoPlay onEnded={()=>{setSpoken(1);}}></audio>
+            <audio src={ChooseLang} autoPlay onEnded={()=>
+          annyang.start({autoRestart: true, continuous: false})}></audio>
 
             <div className="buttonContainer absolute left-[5%] bottom-[20%]">
                 <button className='text-4xl text-blue-700 font-bold bg-gray-200 shadow-black shadow-xl w-[250%] py-5 rounded-3xl my-3' onClick={handleHindiButton}>हिंदी</button>

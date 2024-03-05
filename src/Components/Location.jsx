@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import vikram from '../assets/image-vikram.png'
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { choosenLanguage } from '../store/atoms/Language';
@@ -13,17 +13,21 @@ import LocationEnglish from "../assets/audio/AskLocationEnglish.m4a"
 
 function Location() {
     let audioComponent =null;
-
+   
     const setLocation = useSetRecoilState(Locationatom);
 
     const navigate = useNavigate();
     let keys = 0;
     const language = useRecoilValue(choosenLanguage);
     if(language =='En'){
-        audioComponent = <audio src={LocationEnglish} autoPlay/>
+        audioComponent = <audio src={LocationEnglish} autoPlay onEnded={()=>{
+            annyang.start({ autoRestart: true, continuous: false })
+        }}/>
     }
     else
-    audioComponent =<audio src={LocationHindi} autoPlay/>
+    audioComponent =<audio src={LocationHindi} autoPlay onEnded={()=>{
+            annyang.start({ autoRestart: true, continuous: false })
+    }}/>
 
     console.log(language);
     let buttonText;
@@ -56,8 +60,8 @@ function Location() {
 
                 })
             });
-
-            annyang.start({ autoRestart: true, continuous: false });
+            
+            
             console.log("Started");
 
         }

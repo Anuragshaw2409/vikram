@@ -48,7 +48,7 @@ function RestState() {
         annyang.pause();
         annyang.removeCommands();
         // clearInterval(intervalId);
-        console.log("Paused Moving to next page");
+        // console.log("Paused Moving to next page");
       }
       
       
