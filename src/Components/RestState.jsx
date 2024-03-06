@@ -6,10 +6,17 @@ import { useNavigate } from 'react-router-dom';
 
 function RestState() {
   const navigate = useNavigate();
-  const text=["Hi, this is your JBIT guide","To assist","Click"];
-  
-  
   const [saidVikram, setSaidVikram] = useState(null);
+  const[text, setText]=useState(["Hi, this is your JBIT guide","To assist","Click"]);
+  useEffect(()=>{
+    if(saidVikram){
+      setText(["Hi, Welcome to JBIT","नमस्ते, जेबीआईटी में आपका स्वागत है",null])
+  
+    }
+
+  },[saidVikram]);
+  
+  
  
   
   
