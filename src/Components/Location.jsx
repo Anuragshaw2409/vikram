@@ -20,12 +20,14 @@ function Location() {
     let keys = 0;
     const language = useRecoilValue(choosenLanguage);
     if(language =='En'){
-        audioComponent = <audio src={LocationEnglish} autoPlay onEnded={()=>
-            annyang.start({autoRestart: true, continuous: false})}/>
+        audioComponent = <audio src={LocationEnglish} autoPlay 
+        // onEnded={()=>        annyang.start({autoRestart: true, continuous: false})}
+        />
     }
     else
-    audioComponent =<audio src={LocationHindi} autoPlay onEnded={()=>
-        annyang.start({autoRestart: true, continuous: false})}/>
+    audioComponent =<audio src={LocationHindi} autoPlay
+    //  onEnded={()=>        annyang.start({autoRestart: true, continuous: false})}
+     />
 
     console.log(language);
     let buttonText;

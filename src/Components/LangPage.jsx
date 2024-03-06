@@ -73,8 +73,9 @@ function LangPage() {
 
     return (
         <>
-            <audio src={ChooseLang} autoPlay onEnded={()=>
-          annyang.start({autoRestart: true, continuous: false})}></audio>
+            <audio src={ChooseLang} autoPlay
+            //  onEnded={()=>          annyang.start({autoRestart: true, continuous: false})}
+          ></audio>
 
             <div className="buttonContainer absolute lg:left-[5%] lg:bottom-[20%] top-[40%] w-full flex lg:w-auto lg:block">
                 <button className='text-4xl text-blue-700 font-bold bg-gray-200 shadow-black mx-2  shadow-xl lg:w-[250%] w-[50%] py-5 rounded-3xl my-3' onClick={handleHindiButton}>हिंदी</button>
