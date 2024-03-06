@@ -39,7 +39,7 @@ function Bye() {
         
 
       </div>
-      <img src={vikram} alt="" className='w-1/3 absolute bottom-0 p-0 left-1/2 -translate-x-1/2' />
+      <img src={vikram} alt="" className='lg:w-1/3 absolute bottom-0  left-1/2 -translate-x-1/2 w-full' />
     </>
   )
 }

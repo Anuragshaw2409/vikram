@@ -114,11 +114,11 @@ function prevStep(){
         </div>
 
 
-        <div className="buttonContainer border-4 border-black  h-20 w-20 rounded-full flex justify-center  item-center absolute top-[50%] -translate-y-1/2 left-[2%] ">
-        <button className=' flex justify-center items-center relative' onClick={prevStep}><h1 className='text-7xl absolute bottom-[10%]  font-bold'>&lt; </h1></button>
+        <div className="buttonContainer border-4 lg:border-black border-white h-20 w-20 rounded-full flex justify-center  item-center absolute top-[50%] -translate-y-1/2 lg:left-[2%] -translate-x-[170%] lg:-translate-x-0">
+        <button className=' flex justify-center items-center relative' onClick={prevStep}><h1 className='text-7xl absolute bottom-[10%]  font-bold lg:text-black text-white'>&lt; </h1></button>
         </div>
-        <div className="buttonContainer border-4 border-black  h-20 w-20 rounded-full flex justify-center  item-center absolute top-[50%] -translate-y-1/2 right-[2%]">
-        <button className=' flex justify-center items-center relative' onClick={nextStep}><h1  className='text-7xl absolute bottom-[10%]  font-bold'> &gt;</h1></button>
+        <div className="buttonContainer border-4 lg:border-black border-white   h-20 w-20 rounded-full flex justify-center  item-center absolute top-[50%] -translate-y-1/2 right-[2%] translate-x-[170%] lg:translate-x-0 ">
+        <button className=' flex justify-center items-center relative' onClick={nextStep}><h1  className='text-7xl absolute bottom-[10%]  font-bold lg:text-black text-white'> &gt;</h1></button>
         </div>
 
 
