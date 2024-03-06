@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <>
-      <img src={logo} alt="JBIT Logo" className='p-5 w-[13%] inline-block'/>
+      <img src={logo} alt="JBIT Logo" className='lg:p-5 lg:w-[13%] inline-block w-[30%] m-2'/>
       
     </>
   )

@@ -74,23 +74,25 @@ function Location() {
     return (
         <>
             {audioComponent}
-            <div className="locationContainer flex flex-row absolute right-[4%] flex-wrap  w-[60%] top-[7%]">
+            <div className="container ">
+
+                <div className=" lg:w-[15%] bg-slate-200 lg:inline-block text-wrap text-center lg:p-8 lg:absolute rounded-3xl lg:bottom-[40%] lg:left-[17%] p-4 m-3"><h1 className='text-3xl font-bold'>{buttonText}</h1></div>
+
+            <div className="locationContainer flex flex-row lg:absolute lg:right-[4%] flex-wrap  lg:w-[60%] lg:top-[7%]">
 
                 {locations.map((location, index) => <LocationButton location={location} indexes={index} key={++keys} />)}
+            </div>
+
+                <img src={vikram} alt="" className='lg:w-[25%] lg:absolute bottom-0  lg:left-[2%] '  />
             </div>
 
 
             {/* buttons rendering here */}
 
-            <div className="container ">
-
-                <div className="text w-[15%] bg-slate-200 inline-block text-wrap text-center p-8 absolute rounded-3xl bottom-[40%] left-[17%]"><h1 className='text-3xl font-bold'>{buttonText}</h1></div>
-                <img src={vikram} alt="" className='w-[25%] absolute bottom-0 p-0 left-[2%] ' />
-            </div>
 
 
-            <div className="homeContainer h-20 w-20 border-2 border-white rounded-full hover:cursor-pointer  absolute right-[2%] top-[2%]">
-                <i className="fa-solid fa-house text-5xl text-white p-3" onClick={() => navigate('/')}></i>
+            <div className="homeContainer lg:h-20 lg:w-20 h-10 w-10 border-2 border-white rounded-full hover:cursor-pointer  absolute lg:right-[2%] right-[7%] top-[2%]">
+                <i className="fa-solid fa-house lg:text-5xl text-white lg:p-3 text-2xl p-1" onClick={() => navigate('/')}></i>
             </div>
         </>
     )

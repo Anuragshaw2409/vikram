@@ -103,10 +103,10 @@ function prevStep(){
   return (
     <>
     {reached && <ConfirmationModal setReached={setReached}/>}
-      <div className="container w-[70%] h-[70%] bg-white absolute left-[50%] bottom-[5%] -translate-x-[50%] rounded-2xl m-0">
+      <div className="container lg:w-[70%] lg:h-[70%] lg:bg-white absolute lg:left-[50%] lg:bottom-[5%] lg:-translate-x-[50%] rounded-2xl lg:m-0 rotate-90 lg:rotate-0 bottom-[50%] translate-y-1/2 lg:-translate-y-0 w-screen h-screenreen">
 
         {/* Image viewing logic here */}
-        <div className="imageContainer w-full h-full flex justify-center object-contain">
+        <div className="imageContainer w-full h-full flex justify-center object-contain lg:scale-100 scale-[120%]">
 
         {/* <img src={image} alt="" className=' overflow-hidden rotate-90 '/>
          */}

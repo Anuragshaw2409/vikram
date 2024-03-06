@@ -69,7 +69,7 @@ function RestState() {
     <>
 
       {saidVikram && <audio src={greet} autoPlay onEnded={()=>{ navigate('/langpage'); }} ></audio>}
-        <div className='bg-gray-200 bg-opacity-40 h-auto w-auto absolute  flex-col justify-center text-center top-1/4 p-4 rounded-2xl right-[5%]'>
+        <div className='bg-gray-200 bg-opacity-40 h-auto w-auto absolute  flex-col justify-center text-center lg:top-1/4 p-4 rounded-2xl lg:right-[5%] m-3 '>
         <h1 className='text-white text-4xl font-bold '>{text[0]}</h1>
         <br />
         <h3 className='text-white text-4xl font-bold  '>{text[1]},</h3>
@@ -77,7 +77,7 @@ function RestState() {
         <h3 className='p-1 bg-gradient-to-r from-purple-600 to-custom-blue text-transparent text-4xl font-bold bg-clip-text  '>{text[2]}</h3>
 
       </div>
-      <img src={vikram} alt="" className='w-1/3 absolute bottom-0 p-0 left-1/2 -translate-x-1/2' />
+      <img src={vikram} alt="" className='lg:w-1/3 absolute bottom-0  left-1/2 -translate-x-1/2 w-full' />
     </>
   )
 }
