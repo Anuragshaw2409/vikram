@@ -4,6 +4,7 @@ import React, { useState,useEffect, useRef } from 'react'
 import ConfirmationModal from './ConfirmationModal';
 import { useRecoilValue } from 'recoil';
 import { Locationatom } from '../store/atoms/Locationatom';
+import Header from './Header';
 import vid0 from "../assets/Directions/0.mp4"
 import vid1 from "../assets/Directions/1.mp4"
 import vid2 from "../assets/Directions/2.mp4"
@@ -45,7 +46,7 @@ function ImageViewer() {
   const choosenLocation = useRecoilValue(Locationatom);
   const [reached, setReached]=useState(false);
   let vidComponent=null;
-  if(choosenLocation===0)vidComponent = <video ref ={vidRef} src={vid0} muted={true}/>
+  if(choosenLocation===0)vidComponent = <video ref ={vidRef} src={vid0} muted={true} />
   if(choosenLocation===1)vidComponent = <video ref ={vidRef} src={vid1} muted={true}/>
   if(choosenLocation===2)vidComponent = <video ref ={vidRef} src={vid2} muted={true}/>
   if(choosenLocation===3)vidComponent = <video ref ={vidRef} src={vid3} muted={true}/>
@@ -73,7 +74,7 @@ function ImageViewer() {
   if(choosenLocation===28)vidComponent = <video ref ={vidRef} src={vid28} muted={true}/>
   if(choosenLocation===29)vidComponent = <video ref ={vidRef} src={vid29} muted={true}/>
   if(choosenLocation===30)vidComponent = <video ref ={vidRef} src={vid30} muted={true}/>
-  if(choosenLocation===31)vidComponent = <video ref ={vidRef} src={vid31} muted={true}/>
+  if(choosenLocation===31)vidComponent = <video  ref ={vidRef} src={vid31} muted={true}/>
   if(choosenLocation===32)vidComponent = <video ref ={vidRef} src={vid32} muted={true}/>
   if(choosenLocation===33)vidComponent = <video ref ={vidRef} src={vid33} muted={true}/>
   if(choosenLocation===34)vidComponent = <video ref ={vidRef} src={vid34} muted={true}/>
@@ -102,14 +103,16 @@ function prevStep(){
 
   return (
     <>
+    
+
+   
     {reached && <ConfirmationModal setReached={setReached}/>}
       <div className="container lg:w-[70%] lg:h-[70%] lg:bg-white absolute lg:left-[50%] lg:bottom-[5%] lg:-translate-x-[50%] rounded-2xl lg:m-0 rotate-90 lg:rotate-0 bottom-[50%] translate-y-1/2 lg:-translate-y-0 w-screen h-screenreen">
 
-        {/* Image viewing logic here */}
-        <div className="imageContainer w-full h-full flex justify-center object-contain lg:scale-100 scale-[120%]">
+       
+        <div className="imageContainer w-full h-full flex justify-center object-contain lg:scale-100 scale-[120%] rounded-3xl border-2 bg-white  overflow-clip">
 
-        {/* <img src={image} alt="" className=' overflow-hidden rotate-90 '/>
-         */}
+        
          {vidComponent}
         </div>
 
@@ -124,6 +127,7 @@ function prevStep(){
 
 
       </div>
+   
       
     </>
   )

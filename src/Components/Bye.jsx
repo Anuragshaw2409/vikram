@@ -5,6 +5,7 @@ import {choosenLanguage} from '../store/atoms/Language'
 import { useRecoilValue } from 'recoil';
 import ByeHindi from "../assets/audio/ThankYouHindi.mp3"
 import ByeEnglish from "../assets/audio/ThankYouEnglish.m4a"
+import Header from './Header';
 
 function Bye() {
   let audioComponent=null;
@@ -31,6 +32,8 @@ function Bye() {
     },[]);
   return (
     <>
+    <div className="container bg-gradient-to-r from-custom-blue to-custom-pink h-screen w-screen relative p-0 m-0">
+    <Header/>
     {audioComponent}
       <div className='bg-gray-200 bg-opacity-60 h-auto w-auto absolute  flex-col justify-center text-center top-1/4 p-4 rounded-2xl right-[5%]'>
         <h1 className='p-1 bg-gradient-to-t from-purple-800 to-custom-blue text-transparent text-4xl font-bold bg-clip-text  '>{byeText[0]}</h1>
@@ -40,6 +43,7 @@ function Bye() {
 
       </div>
       <img src={vikram} alt="" className='lg:w-1/3 absolute bottom-0  left-1/2 -translate-x-1/2 w-full' />
+    </div>
     </>
   )
 }

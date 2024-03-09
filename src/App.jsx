@@ -17,7 +17,7 @@ function App() {
     <>
     <RecoilRoot>
 
-    <Header/> 
+    
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<RestState/>}/>

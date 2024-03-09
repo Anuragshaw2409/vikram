@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { choosenLanguage } from '../store/atoms/Language';
 import ChooseLang from "../assets/audio/ChooseLangMerged.mp3"
 import annyang from 'annyang';
+import Header from './Header';
 
 
 
@@ -72,10 +73,12 @@ function LangPage() {
 
 
     return (
-        <>
-            <audio src={ChooseLang} autoPlay
-            //  onEnded={()=>          annyang.start({autoRestart: true, continuous: false})}
-          ></audio>
+      <>  
+      <audio src={ChooseLang} autoPlay
+      //  onEnded={()=>          annyang.start({autoRestart: true, continuous: false})}
+      ></audio>
+          <div className="container bg-gradient-to-r from-custom-blue to-custom-pink h-screen w-screen relative p-0 m-0">
+      <Header/>
 
             <div className="buttonContainer absolute lg:left-[5%] lg:bottom-[20%] top-[40%] w-full flex lg:w-auto lg:block">
                 <button className='text-4xl text-blue-700 font-bold bg-gray-200 shadow-black mx-2  shadow-xl lg:w-[250%] w-[50%] py-5 rounded-3xl my-3' onClick={handleHindiButton}>हिंदी</button>
@@ -83,7 +86,7 @@ function LangPage() {
                 <button className='text-4xl text-blue-700 font-bold bg-gray-200 shadow-black mx-2  shadow-xl lg:w-[250%] w-[50%] py-5 rounded-3xl my-3'onClick={handleEnglishButton}>English</button>
 
             </div>
-            <div className='bg-gray-200 bg-opacity-40 h-auto w-auto absolute  flex-col justify-center text-center lg:top-1/4 lg:p-4 rounded-2xl lg:right-[5%] p-2 m-2'>
+            <div className='bg-gray-200 bg-opacity-40 h-auto lg:w-auto absolute  flex-col  text-center lg:top-1/4 lg:p-4 rounded-2xl lg:right-[5%] p-2 m-2 left-[50%] -translate-x-1/2 w-[90%]'>
                 <h1 className='text-white lg:text-4xl text-2xl font-bold '>Choose your preferred language</h1>
                 <br />
 
@@ -94,6 +97,7 @@ function LangPage() {
             <div className="homeContainer lg:h-20 lg:w-20 h-10 w-10 border-2 border-white rounded-full hover:cursor-pointer  absolute lg:right-[2%] right-[7%] top-[2%]">
                 <i className="fa-solid fa-house lg:text-5xl text-white lg:p-3 text-2xl p-1" onClick={() => navigate('/')}></i>
             </div>
+          </div>
         </>
     )
 }
