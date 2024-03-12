@@ -90,7 +90,7 @@ function ImageViewer() {
 
 
           {/* {vidComponent} */}
-          <img src={imageURL} alt="Image" />;
+          <img src={imageURL} alt="Image" />
           
 
         </div>
