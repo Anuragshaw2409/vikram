@@ -22,7 +22,7 @@ function ImageViewer() {
 
 
   useEffect(()=>{
-    fetch('http://localhost:3000/totalsteps',{
+    fetch('https://backend-vikram.vercel.app/totalsteps',{
       headers:{
         "location":choosenLocation
       }
@@ -55,7 +55,7 @@ function ImageViewer() {
   useEffect(() => {
     // Fetch image from backend
     setImageURL(loading);
-    fetch('http://localhost:3000/location', {
+    fetch('https://backend-vikram.vercel.app/location', {
       headers: {
         "location": choosenLocation,
         "step" : (step-1)
