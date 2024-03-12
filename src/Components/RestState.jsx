@@ -27,6 +27,7 @@ function RestState() {
     <Header/>
 
       {saidVikram && <audio src={greet} autoPlay onEnded={()=>{ navigate('/langpage'); }} ></audio>}
+    
         <div className='bg-gray-200 bg-opacity-40 h-auto w-auto absolute  flex-col justify-center text-center lg:top-1/4 p-4 rounded-2xl lg:right-[5%] m-3 '>
         <h1 className='text-white text-4xl font-bold '>{text[0]}</h1>
         <br />
