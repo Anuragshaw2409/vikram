@@ -143,6 +143,7 @@ import vid11 from "../assets/Directions/11.mp4"
 import vid12 from "../assets/Directions/12.mp4"
 import vid13 from "../assets/Directions/13.mp4"
 import vid14 from "../assets/Directions/14.mp4"
+import vid15 from "../assets/Directions/15.mp4"
 import vid16 from "../assets/Directions/16.mp4"
 import vid17 from "../assets/Directions/17.mp4"
 import vid18 from "../assets/Directions/18.mp4"
@@ -186,6 +187,7 @@ function ImageViewer() {
   if(choosenLocation===12)vidComponent = <video ref ={vidRef} src={vid12} muted={true} preload='auto'/>
   if(choosenLocation===13)vidComponent = <video ref ={vidRef} src={vid13} muted={true} preload='auto'/>
   if(choosenLocation===14)vidComponent = <video ref ={vidRef} src={vid14} muted={true} preload='auto'/>
+  if(choosenLocation===15)vidComponent = <video ref ={vidRef} src={vid15} muted={true} preload='auto'/>
   if(choosenLocation===16)vidComponent = <video ref ={vidRef} src={vid16} muted={true} preload='auto'/>
   if(choosenLocation===17)vidComponent = <video ref ={vidRef} src={vid17} muted={true} preload='auto'/>
   if(choosenLocation===18)vidComponent = <video ref ={vidRef} src={vid18} muted={true} preload='auto'/>
